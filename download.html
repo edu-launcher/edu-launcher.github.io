@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="gsap.js"></script>
+    <title>EDU Launcher</title>
+    <link rel='stylesheet' href='https://raw.githubusercontent.com/locomotivemtl/locomotive-scroll/master/dist/locomotive-scroll.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body data-scroll class="has-smooth-scroll">
+        <div data-scroll-container id="smooth-content">
+            <h1>Download</h1>
+            <h3>Your download will start soon.</h3>
+            <image src="img/blob.png" class="blob" style="position:absolute; right: -1000px; width: 200%; z-index: -9;"></image>
+            </div>
+      <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js'></script><script  src="./script.js"></script>
+      <script>
+         gsap.to("h1", {
+                    y: 100,
+                    duration: 1, 
+                    scale: 1.1 
+                })
+                gsap.to("h3", {
+                    y: 10,
+                    duration: 1,
+                    scale: 1.1,
+                    delay: 0.25
+                })
+                gsap.to("h1", {
+                    opacity: 1,
+                    duration: 2
+                })
+                gsap.to("h3", {
+                    opacity: 1,
+                    delay: 0.25,
+                    duration: 2
+                })
+                
+                gsap.to(".blob", {
+                   opacity: 1,
+                   duration: 1,
+                   delay: 0.75
+                   })
+                   gsap.to(".card", {
+                    opacity: 1,
+                    duration: .5,
+                    delay: 0.75,
+                   })
+      </script>
+</body>
+</html>
