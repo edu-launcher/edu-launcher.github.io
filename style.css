@@ -50,13 +50,18 @@ html.has-scroll-dragging {
   cursor: grabbing;
 }
 
+@font-face {
+  font-family: SF Pro;
+  src: url(fonts/SF-Pro.ttf);
+}
+
 html{
   scroll-behavior: smooth;
   cursor: none; 
 }
 
 h1 {
-  font-family: -apple-system, BlinkMacSystemFont;
+  font-family: SF Pro;
   font-weight: 800;
   font-size: 120px;
   color: white;
@@ -71,7 +76,7 @@ h1:hover{
   text-shadow: 0px 0px 50px #ffffff97;
 }
 h3 {
-  font-family: -apple-system, BlinkMacSystemFont;
+  font-family: SF Pro;
   color: #fff;
   text-align: center;
   padding-top: 3%;
@@ -87,7 +92,7 @@ h3 {
 
 body {
   background-color: #16002d;
-  transform: perspective(1500px);
+  transform: perspective(1px);
 }
 
 .download-btn {
@@ -96,7 +101,7 @@ body {
   text-align: center;
   left: 45%;
   border-radius: 10px;
-  font-family: -apple-system, BlinkMacSystemFont;
+  font-family: SF Pro;
   background-image: linear-gradient(#e356ff, #9505e3);
   color: white;
   height: 2.5%;
@@ -106,14 +111,15 @@ body {
   transform: translateY(75px) scale(1.0);
   opacity: 0;
   transition: box-shadow .5s ease-in-out; 
-  box-shadow: 0px 0px 40px 20px rgba(252, 91, 255, 0.181);
+  box-shadow: 0px 0px 70px 20px rgba(252, 91, 255, 0.181);
   
 }
 .download-btn:hover {
   transition: all .5s ease-in-out; 
   background-image: linear-gradient(#ed63ff, #c653ff);
   cursor: none; 
-  box-shadow: 0px 0px 70px 20px rgba(252, 91, 255, 0.585);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 100px 20px rgba(252, 91, 255, 0.585);
 }
 
 
@@ -127,7 +133,7 @@ body {
   opacity: 0;
   width: 60%;
   left: 20.25%;
-  top: 100px;
+  top: 70px;
   position:relative;
   z-index: 0;
   transition: transform .5s ease-in-out; 
@@ -150,4 +156,39 @@ body {
   mix-blend-mode: difference; 
   z-index: 1000;
   transform: scale(0.85);
+}
+
+
+
+.mac-card {
+  position:absolute;
+  left: 8%;
+  width: 60%;
+  transform: scale(40%);
+  opacity: 0;
+}
+
+.windows-card {
+  position:absolute;
+  left: 35%;
+  transform: scale(40%);
+  opacity: 0
+}
+
+.mac-image {
+  transition: transform .5s ease-in-out; 
+}
+
+.mac-image:hover {
+  transform: scale(1.05);
+
+}
+
+.windows-image {
+  transition: transform .5s ease-in-out; 
+}
+
+.windows-image:hover {
+  transform: scale(1.05);
+
 }

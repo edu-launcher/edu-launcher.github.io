@@ -14,7 +14,14 @@
 <body data-scroll class="has-smooth-scroll">
         <div data-scroll-container id="smooth-content">
             <h1>Download</h1>
-            <h3>Your download will start soon.</h3>
+            <mac class="mac-card">
+                <img class="mac-image" src="img/apple.png" alt="">
+                <button class="download-btn" style="opacity: 1; height: 10%; width: 50%; font-size: 50px; border-radius: 30px;position: absolute; transform: translateY(900px) translateX(-250px);" onclick="location.href='https://github.com/edu-launcher/edu-launcher.github.io/releases/download/preview/MACOS.WKWEBVIEW.zip'">Download (5.4 MB)</button>
+            </mac>
+            <windows class="windows-card">
+                <img class="windows-image" src="img/windows.png" alt="">
+                <button class="download-btn" style="opacity: 1; height: 10%; width: 50%; font-size: 50px; border-radius: 30px; position: absolute; transform: translateY(900px) translateX(-200px);" onclick="location.href='https://github.com/edu-launcher/edu-launcher.github.io/releases/download/preview/WINDOWS.ELECTRONJS.zip'">Download (94.4 MB)</button>
+            </windows>
             <image src="img/blob.png" class="blob" style="position:absolute; right: -1000px; width: 200%; z-index: -9;"></image>
             </div>
       <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js'></script><script  src="./script.js"></script>
@@ -50,6 +57,18 @@
                     duration: .5,
                     delay: 0.75,
                    })
+                   gsap.to(".mac-card", {
+                    opacity: 1,
+                    y: -270,
+                    duration: 1,
+                    delay: 0.25
+                })
+                    gsap.to(".windows-card", {
+                        opacity: 1,
+                    y: -270,
+                    duration: 1,
+                    delay: 0.5
+                })
       </script>
 </body>
 </html>
